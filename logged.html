@@ -19,39 +19,38 @@
 
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script>
-        // Initialize Firebase
+      // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyAbCOlYXpYjGaWIYXlusRQRJzRmu7wWRuk",
-        authDomain: "trainscheduler-aa3bc.firebaseapp.com",
-        databaseURL: "https://trainscheduler-aa3bc.firebaseio.com",
-        projectId: "trainscheduler-aa3bc",
-        storageBucket: "trainscheduler-aa3bc.appspot.com",
-        messagingSenderId: "810609306899"
+        apiKey: "AIzaSyAkgEd03PubJ_7Q3zxKcOmg7csL_5oT7ng",
+        authDomain: "login-1dfbe.firebaseapp.com",
+        databaseURL: "https://login-1dfbe.firebaseio.com",
+        projectId: "login-1dfbe",
+        storageBucket: "login-1dfbe.appspot.com",
+        messagingSenderId: "981400034462"
       };
       firebase.initializeApp(config);
     </script>
 
-    <script>
-      firebase.auth().onAuthStateChanged(function(user){
-        if (user) {
-            document.body.innerHTML = '<h1> Congrats ' + user.displayName + ', you are done! </h1>';
-         } else {
-        console.log("no user signed in");
-      }
-    });
-    </script>
+  
 
 
   <body>
+
+      <script>
+          firebase.auth().onAuthStateChanged(function(user){
+            if (user) {
+                document.body.innerHTML = '<h1> Congrats ' + user.displayName + ', you are done! </h1>';
+             } else {
+            console.log("no user signed in");
+          }
+        });
+        </script>
     
 
 
     <h1>Welcome to the AMTRAK Train Timetable</h1>
-    <div id="firebaseui-auth-container"></div>
 
 
 
-<!-- Link to JS -->
-<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
