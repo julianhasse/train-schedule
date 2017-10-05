@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
     background-color: #CAC7B9;
+}
+
+#loginTitle {
+    align-content: center;
+    color: #62582B;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif; 
 }
