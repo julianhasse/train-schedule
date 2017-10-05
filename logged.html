@@ -44,7 +44,7 @@
       <script>
           firebase.auth().onAuthStateChanged(function(user){
             if (user) {
-              $("#welcome").html('<h2 align="center"> Welcome ' + user.displayName + ' to AMTRAK Train Schedule</h2>');
+              $("#welcome").html('<h2 align="center"> Welcome ' + user.displayName + ' to AMTRAK</h2>');
                 // document.body.innerHTML = '<h2 align="center"> Welcome ' 
                 // + user.displayName + ' to AMTRAK Train Schedule</h2>';
              } else {
