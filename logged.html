@@ -39,20 +39,12 @@
       <script>
           firebase.auth().onAuthStateChanged(function(user){
             if (user) {
-                document.body.innerHTML = '<h1> Congrats ' + user.displayName + ', you are done! </h1>';
+                document.body.innerHTML = '<h1 align="center" class="loginTitle"> Welcome ' + user.displayName + ' to AMTRAK Train Schedule</h1>';
              } else {
             console.log("no user signed in");
           }
         });
         </script>
     
-
-
-    <h1>Welcome to the AMTRAK Train Timetable</h1>
-
-
-
-<!-- Link to JS -->
-<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
