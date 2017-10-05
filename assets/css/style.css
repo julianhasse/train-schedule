@@ -1,0 +1,21 @@
+body {
+	background-image: url("../images/train-tracks-background-1.jpg");
+	background-repeat: no-repeat;
+}
+
+.jumbotron {
+	/*color: white;*/
+	background-image: url("../images/title-background.jpg");
+}
+
+h1 {
+
+	font-family: 'Gravitas One', cursive;
+	text-align: center;
+}
+
+h2, h3 {
+
+	font-family: 'Vast Shadow', cursive;
+	text-align: center;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Amtrak Train Timetable</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+     
+    </head>
+   
+    <!-- Below is the initialization snippet for my Firebase Project - Train Scheduler -->
+    <!-- ============================================================================= -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAbCOlYXpYjGaWIYXlusRQRJzRmu7wWRuk",
+        authDomain: "trainscheduler-aa3bc.firebaseapp.com",
+        databaseURL: "https://trainscheduler-aa3bc.firebaseio.com",
+        projectId: "trainscheduler-aa3bc",
+        storageBucket: "trainscheduler-aa3bc.appspot.com",
+        messagingSenderId: "810609306899"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script>
+      firebase.auth().onAuthStateChanged(function(user){
+        if (user) {
+            document.body.innerHTML = '<h1> Congrats ' + user.displayName + ', you are done! </h1>';
+         } else {
+        console.log("no user signed in");
+      }
+    });
+    </script>
+
+
+  <body>
+    
+
+
+    <h1>Welcome to the AMTRAK Train Timetable</h1>
+    <div id="firebaseui-auth-container"></div>
+
+
+
+<!-- Link to JS -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>

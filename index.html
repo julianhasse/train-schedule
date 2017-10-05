@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Amtrak Train Timetable</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+    
+   
+    <!-- Below is the initialization snippet for my Firebase Project - Train Scheduler -->
+    <!-- ============================================================================= -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAbCOlYXpYjGaWIYXlusRQRJzRmu7wWRuk",
+        authDomain: "trainscheduler-aa3bc.firebaseapp.com",
+        databaseURL: "https://trainscheduler-aa3bc.firebaseio.com",
+        projectId: "trainscheduler-aa3bc",
+        storageBucket: "trainscheduler-aa3bc.appspot.com",
+        messagingSenderId: "810609306899"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
+    <!-- The code below initializes FirebaseUI -->
+    <!-- ============================================================================= -->
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'logged.html',
+        'callbacks': {
+          'signInSuccess': function(user, credential, redirectUrl) {
+            if (window.opener) {
+              // The widget has been opened in a popup, so close the window
+              // and return false to not redirect the opener.
+              window.close();
+              return false;
+            } else {
+              // The widget has been used in redirect mode, so we redirect to the signInSuccessUrl.
+              return true;
+            }
+          }
+        },
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: 'https://www.google.com'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+     </head>
+
+  <body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+    <h1>Welcome to My Awesome App</h1>
+    <div id="firebaseui-auth-container"></div>
+
+</body>
+</html>
