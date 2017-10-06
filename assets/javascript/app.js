@@ -27,7 +27,7 @@ $(document).ready(function() {
         // Grabbed user input from text boxes
         var name = $("#name-input").val().trim();
         var destination = $("#destination-input").val().trim();
-        var startTime = $("#startTime-input").val().trim();
+        var startTime = $("#firstService-input").val().trim();
         var frequency = $("#frequency-input").val().trim();
 
         // Creates local "temporary" object for new trains
@@ -52,7 +52,7 @@ $(document).ready(function() {
         // Clears all of the text-boxes
   		$("#name-input").val("");
   		$("#destination-input").val("");
- 		$("#startTime-input").val("");
+ 		  $("#firstService-input").val("");
   		$("#frequency-input").val("");
     });
 
