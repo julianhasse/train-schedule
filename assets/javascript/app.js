@@ -17,7 +17,7 @@ $(document).ready(function() {
     var database = firebase.database();
 
     // Display user name
-    $("#greeting").html('<i class="fa fa-user" aria-hidden="true"></i>' + " " + localStorage.getItem("name"));
+    $("#greeting").html('<i class="fa fa-user" aria-hidden="true"></i>' + "  " + localStorage.getItem("name"));
 
     // Capture user entry
     $("#add").on("click", function(event) {
