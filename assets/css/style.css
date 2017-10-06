@@ -1,27 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 body {
 	background-image: url("../images/train-tracks-background-1.jpg");
 	background-repeat: no-repeat;
 }
 
-#loginTitle {
-    align-content: center;
-    color: #62582B;
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif; 
-}
-
 .jumbotron {
+	/*color: white;*/
 	background-image: url("../images/title-background.jpg");
 }
 
 h1 {
-	font-family: 'Roboto', sans-serif;
+
+	font-family: 'Gravitas One', cursive;
 	text-align: center;
 }
 
 h2, h3 {
-	font-family: 'Roboto', sans-serif;
+
+	font-family: 'Vast Shadow', cursive;
 	text-align: center;
 }
