@@ -11,7 +11,6 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
         crossorigin="anonymous">
         
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" type="text/css" href="assets/css/login.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -29,12 +28,14 @@
 
     <div class="container">
 
+    <!-- AMTRAK logo -->
     <div class="row">
          <img class="logo center-block" src="assets/images/logo.jpg">        
     </div> 
 
+    <!-- Table begins here -->
 	<div class="row">
-        <div class="col-md-12" id="currentTrains">
+        <div class="col-md-12" id="displayTrains">
             <div class="panel panel-info">
                 <div class="panel-heading"><h3 class="panel-title"><strong>Train Timetable &nbsp; | &nbsp; </strong><span id="greeting"></span></h3>
                 </div>
@@ -48,9 +49,9 @@
                                 <th>Next Service <i class="fa fa-clock-o" aria-hidden="true"></i></th>          
 		                        <th>Arriving in <i class="fa fa-bell" aria-hidden="true"></i></th>            
 		                    </tr>
-	                   	</thead>
-						
-						<!-- Content will be display here  -->
+                           </thead>
+                           
+						<!-- Dynamically generated content will be displayed here -->
 	                    <tbody></tbody>
 
                     </table>    
@@ -60,7 +61,7 @@
         </div>
     </div>
 
-    <!-- Add a Service -->
+    <!-- User will add content here -->
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-info">
@@ -72,22 +73,22 @@
                 <form>
                     <div class="form-group">
 	                    <label for="name">Train Name</label> 
-	                    <input type="text" class="form-control" id="name-input" aria-describedby="basic-addon1">
+	                    <input type="text" class="form-control" id="name-input" aria-describedby="Train-name">
                     </div>
 
                     <div class="form-group">
                     	<label for="destination">Destination</label>
-						<input type="text" class="form-control" id="destination-input" aria-describedby="basic-addon2">
+						<input type="text" class="form-control" id="destination-input" aria-describedby="Destination">
                     </div>
 
                     <div class="form-group">
                     	<label for="frequency">Frequency (min)</label>
-                        <input type="text" class="form-control" id="frequency-input" aria-describedby="basic-addon3">
+                        <input type="text" class="form-control" id="frequency-input" aria-describedby="Frequency">
                     </div>
 
                     <div class="form-group">
                             <label for="startTime">First Service (24 hour time)</label>
-                            <input type="text" class="form-control" id="firstService-input" aria-describedby="basic-addon4" placeholder="HH:mm">
+                            <input type="text" class="form-control" id="firstService-input" aria-describedby="First-service" placeholder="HH:mm">
                     </div>
                     
                     <button type="button" class="btn btn-primary" id="add">Add <i class="fa fa-plus" aria-hidden="true"></i></button>
@@ -97,6 +98,7 @@
         </div>
     </div>
 
+<!-- Fancy footer, because... why not? -->
     <div class="footer">Handcrafted with <span class="doc-heart"><i class="fa fa-heart">
         </i></span> and a lot of <i class="fa fa-coffee"></i></div>
 
