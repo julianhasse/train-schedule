@@ -18,6 +18,8 @@ $(document).ready(function() {
     // Create a variable to reference the database.
     var database = firebase.database();
 
+    $("#greeting").html('<i class="fa fa-user" aria-hidden="true"></i>' + " " + localStorage.getItem("name"));
+
     // Capture Button Click
     $("#add").on("click", function(event) {
         event.preventDefault();
@@ -108,7 +110,7 @@ $(document).ready(function() {
 
   	// Add each train's data into the table
   	$("#train-table > tbody").append("<tr><td>" + name + "</td><td>" + destination + "</td><td>" +
-  	frequency + "</td><td>" + nextTrainTime + "</td><td>" + minToNext + "</td></tr>");
+  	frequency + " minutes" + "</td><td>" + nextTrainTime + "</td><td>" + minToNext + " minutes" + "</td></tr>");
 });
 
 // Example Time Math

@@ -1,21 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
-	background-image: url("../images/train-tracks-background-1.jpg");
-	background-repeat: no-repeat;
+	background-color:#004F6D;
 }
 
+#loginTitle {
+    align-content: center;
+    color:white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.footer {
+	color:white;
+	font-family: 'Roboto', sans-serif; 
+
+}
 .jumbotron {
-	/*color: white;*/
-	background-image: url("../images/title-background.jpg");
+	background-image: url('assets/images/logo.jpg')
+}
+
+.logo {
+	margin: 0 auto;
 }
 
 h1 {
-
-	font-family: 'Gravitas One', cursive;
+	font-family: 'Roboto', sans-serif;
 	text-align: center;
 }
 
 h2, h3 {
-
-	font-family: 'Vast Shadow', cursive;
+	font-family: 'Roboto', sans-serif;
 	text-align: center;
+	color:white;
 }
+
+/* ---- FA ICONS ----- */
+/* ------------------- */
+.fa-heart {
+	color:red;
+}
+
+.fa-coffee {
+	color: #E6E6C7;
+}
+
+.fa-bell {
+	color:#68AED1;
+}
+
+.fa-clock-o {
+	color:#68AED1;
+}
+
+.fa-subway {
+	color:#68AED1;
+}
+
+.fa-arrow-right {
+	color:#68AED1;
+}
+
+.fa-history {
+	color:#68AED1;
+}
+

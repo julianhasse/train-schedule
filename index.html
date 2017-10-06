@@ -1,62 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>Amtrak Train Timetable</title>
+        <title>Amtrak</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-        crossorigin="anonymous">
-        
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-        <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
-        
-        <script
-        src="https://code.jquery.com/jquery-3.2.1.js"
-        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-        crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="assets/css/login.css">
     </head>
-   
-    <!-- Below is the initialization snippet for my Firebase Project - Train Scheduler -->
+      
+    <!-- Below is the initialization snippet for my Firebase Auth Project - Train Scheduler -->
     <!-- ============================================================================= -->
-
+    
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script>
-        // Initialize Firebase
+      // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyAbCOlYXpYjGaWIYXlusRQRJzRmu7wWRuk",
-        authDomain: "trainscheduler-aa3bc.firebaseapp.com",
-        databaseURL: "https://trainscheduler-aa3bc.firebaseio.com",
-        projectId: "trainscheduler-aa3bc",
-        storageBucket: "trainscheduler-aa3bc.appspot.com",
-        messagingSenderId: "810609306899"
+        apiKey: "AIzaSyB9yhHke_yTlAloUcELTGgi8CftoZV_QDg",
+        authDomain: "train-login.firebaseapp.com",
+        databaseURL: "https://train-login.firebaseio.com",
+        projectId: "train-login",
+        storageBucket: "train-login.appspot.com",
+        messagingSenderId: "281054068410"
       };
       firebase.initializeApp(config);
     </script>
 
 
-    <!-- The code below initializes FirebaseUI -->
-    <!-- ============================================================================= -->
+<!-- The code below is the initialization of firebaseui, using email/google to login -->
 
     <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
     <script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
-        signInSuccessUrl: 'timetable.html',
+        signInSuccessUrl: 'logged.html',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
           firebase.auth.GoogleAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
         // Terms of service url.
-        tosUrl: '<your-tos-url>'
+        tosUrl: 'www.google.com'
       };
 
       // Initialize the FirebaseUI Widget using Firebase.
@@ -64,16 +47,13 @@
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-  </head>
-  <body>
-    <!-- The surrounding HTML is left untouched by FirebaseUI.
-         Your app may use that space for branding, controls and other customizations.-->
-    <h1>Welcome to My Awesome App</h1>
-    <div id="firebaseui-auth-container"></div>
+  
+     
+
+<body>
+<h1 align="center" id="loginTitle">Please sign in</h1> 
+<div id="firebaseui-auth-container"></div>
 
 
-
-<!-- Link to JS -->
-<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
