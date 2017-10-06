@@ -110,7 +110,7 @@ $(document).ready(function() {
 
   	// Add each train's data into the table
   	$("#train-table > tbody").append("<tr><td>" + name + "</td><td>" + destination + "</td><td>" +
-  	frequency + " minutes" + "</td><td>" + nextTrainTime + "</td><td>" + minToNext + " minutes" + "</td></tr>");
+  	frequency + " min." + "</td><td>" + nextTrainTime + "</td><td>" + minToNext + " min." + "</td></tr>");
 });
 
 // Example Time Math
