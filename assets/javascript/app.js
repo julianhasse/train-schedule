@@ -16,10 +16,10 @@ $(document).ready(function() {
     // Reference the database.
     var database = firebase.database();
 
-    // Display User Name
+    // Display user name
     $("#greeting").html('<i class="fa fa-user" aria-hidden="true"></i>' + " " + localStorage.getItem("name"));
 
-    // Capture Button Click
+    // Capture user entry
     $("#add").on("click", function(event) {
         event.preventDefault();
 
@@ -76,6 +76,7 @@ $(document).ready(function() {
     // Next Train Arrival time
     var nextTrain = moment().add(minToNext, "minutes");
 
+    // Next Train format
     var nextTrainTime = moment(nextTrain).format("LT");
 
 

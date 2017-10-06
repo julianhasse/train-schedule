@@ -15,11 +15,21 @@ body {
 	margin: 0 auto;
 }
 
+.digitalClock{
+	border:0px;
+	width:90px;
+	height:13px;
+	padding:0;
+	margin:0;
+}
+
+
 .footer {
 	color:white;
 	font-family: 'Roboto', sans-serif; 
 
 }
+
 .jumbotron {
 	background-image: url('assets/images/logo.jpg')
 }
