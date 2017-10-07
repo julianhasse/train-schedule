@@ -39,12 +39,12 @@ $(document).ready(function() {
   		$("#frequency-input").val("");
     });
 
-	database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+	database.ref().on("child_added", function(dataSnapshot, prevChildKey) {
 
-  	var name = childSnapshot.val().name;
-  	var destination = childSnapshot.val().destination;
-  	var startTime = childSnapshot.val().startTime;
-  	var frequency = childSnapshot.val().frequency;
+  	var name = dataSnapshot.val().name;
+  	var destination = dataSnapshot.val().destination;
+  	var startTime = dataSnapshot.val().startTime;
+  	var frequency = dataSnapshot.val().frequency;
 
 
     var startTimeConverted = moment(startTime, "hh:mm").subtract(1, "years");
