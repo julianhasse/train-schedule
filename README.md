@@ -1,6 +1,5 @@
 
-![Alt text](/images/img
-01.png?raw=true)
+![Alt text](/images/img01.png?raw=true)
 
 # Amtrak Train Timetable
 ===================
