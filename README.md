@@ -1,5 +1,6 @@
 
-![Alt text](/images/img01.png?raw=true)
+![Alt text](/images/img
+01.png?raw=true)
 
 # Amtrak Train Timetable
 ===================
@@ -14,22 +15,16 @@ Author: Julian Hasse
 > - Developed 100% in JavaScript.
 > - Technologies: HTML, CSS, Bootstrap, Firebase, and Google Auth.
 
-#### <i class="icon-file"></i> Start Game
+#### <i class="icon-file"></i> Description
 
-The entry point file is "main.js". Before you run this file you need to type "npm install" in your terminal to add the "node_modules" folder with all the required packages. Then, type: "node main" and game will start.
+This app lets the user get information about Amtrak Train schedule. The initial page uses Google auth, which
+will let users to login with either their email or Google account.
+In the following page users can add the service they would like to get information about.
+Finally, the system will display the next available service, arrival time and the frequency to 
+the requested destination.  
 
-#### <i class="icon-folder-open"></i> Game rules
-
-Your goal is to guess the secret word from a computer-related list. The game will prompt you for letters. You can type either <kbd>A</kbd> or <kbd>a</kbd>
-and the system will set everything to lower case.
-
-#### <i class="icon-pencil"></i> Lives
-
-You have 10 tries to guess the word. (Number is hardcoded but will be change to a "level" option in future releases)
-
-#### <i class="icon-trash"></i> Graphics
-
-Game features a nice 'retro' feel by using Figlet package for ASCII art.
+#### <i class="icon-folder-open"></i> Technology
+Data is stored in a firebase DB. 
 
 #### <i class="icon-hdd"></i> License
 
